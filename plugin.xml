@@ -69,6 +69,8 @@
         <framework src="com.google.ads.mediation:facebook:$FACEBOOK_MEDIATION_VERSION" />
         <framework src="com.google.ads.mediation:applovin:9.14.6.0" />
         <framework src="com.google.ads.mediation:adcolony:4.3.0.0" />
+        <framework src="com.google.ads.mediation:ironsource:7.0.3.1.0" />
+            
             
         
 
