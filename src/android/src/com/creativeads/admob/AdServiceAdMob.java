@@ -6,15 +6,13 @@ import android.util.Log;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 //import com.google.android.ads.mediationtestsuite.MediationTestSuite;
-import com.google.ads.mediation.adcolony.AdColonyMediationAdapter;
 import com.creativeads.AdBanner;
 import com.creativeads.AdInterstitial;
 import com.creativeads.AdRewardedVideo;
 import com.creativeads.AdService;
-import com.applovin.sdk.AppLovinPrivacySettings;
-
+//import com.applovin.sdk.AppLovinPrivacySettings;
 // import com.unity3d.ads.metadata.MetaData;
-import com.google.ads.mediation.adcolony.AdColonyMediationAdapter;
+//import com.google.ads.mediation.adcolony.AdColonyMediationAdapter;
 
 
 import org.json.JSONObject;
@@ -60,10 +58,10 @@ public class AdServiceAdMob implements AdService {
 
         if (!_initialized) {
            
-            AdColony.AppOptions appOptions = new AdColony.AppOptions();
-            appOptions.setGDPRConsentString("1");
-            appOptions.setGDPRRequired(true);
-            AudienceNetworkAds.initialize(activity);
+          //  AdColony.AppOptions appOptions = new AdColony.AppOptions();
+          //  appOptions.setGDPRConsentString("1");
+          //  appOptions.setGDPRRequired(true);
+           // AudienceNetworkAds.initialize(activity);
 
             MobileAds.initialize(activity, appId);
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
