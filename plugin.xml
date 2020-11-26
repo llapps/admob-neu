@@ -68,6 +68,8 @@
         <framework src="com.google.android.gms:play-services-ads:$PLAY_SERVICES_VERSION" />       
         <framework src="com.google.ads.mediation:facebook:$FACEBOOK_MEDIATION_VERSION" />
         <framework src="com.google.ads.mediation:applovin:9.14.6.0" />
+        <framework src="com.google.ads.mediation:adcolony:4.3.0.0" />
+            
         
 
 
