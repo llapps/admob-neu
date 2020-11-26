@@ -6,6 +6,7 @@ import android.util.Log;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 //import com.google.android.ads.mediationtestsuite.MediationTestSuite;
+import com.google.ads.mediation.adcolony.AdColonyMediationAdapter;
 import com.creativeads.AdBanner;
 import com.creativeads.AdInterstitial;
 import com.creativeads.AdRewardedVideo;
@@ -59,7 +60,7 @@ public class AdServiceAdMob implements AdService {
 
         if (!_initialized) {
            
-            AdColonyAppOptions appOptions = AdColonyMediationAdapter.getAppOptions();
+            AdColony.AppOptions appOptions = new AdColony.AppOptions();
             appOptions.setGDPRConsentString("1");
             appOptions.setGDPRRequired(true);
             AudienceNetworkAds.initialize(activity);
