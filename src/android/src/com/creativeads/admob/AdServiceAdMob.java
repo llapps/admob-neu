@@ -58,8 +58,11 @@ public class AdServiceAdMob implements AdService {
         Log.d(TAG, "Initializing with appId: " + appId);
 
         if (!_initialized) {
-            
-
+           
+            AdColonyAppOptions appOptions = AdColonyMediationAdapter.getAppOptions();
+            appOptions.setGDPRConsentString("1");
+            appOptions.setGDPRRequired(true);
+            AudienceNetworkAds.initialize(activity);
 
             MobileAds.initialize(activity, appId);
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
