@@ -12,6 +12,7 @@ import com.creativeads.AdRewardedVideo;
 import com.creativeads.AdService;
 import com.applovin.sdk.*;
 // import com.unity3d.ads.metadata.MetaData;
+import com.google.ads.mediation.adcolony.AdColonyMediationAdapter;
 
 
 import org.json.JSONObject;
@@ -56,6 +57,10 @@ public class AdServiceAdMob implements AdService {
         Log.d(TAG, "Initializing with appId: " + appId);
 
         if (!_initialized) {
+            AdColonyAppOptions appOptions = AdColonyMediationAdapter.getAppOptions();
+            appOptions.setPrivacyFrameworkRequired(AdColonyAppOptions.GDPR, true);
+            appOptions.setPrivacyConsentString(AdColonyAppOptions.GDPR, "1");
+
             MobileAds.initialize(activity, appId);
             AppLovinSdk.initializeSdk(activity);
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
