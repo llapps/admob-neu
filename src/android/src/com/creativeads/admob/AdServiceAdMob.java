@@ -10,7 +10,8 @@ import com.creativeads.AdBanner;
 import com.creativeads.AdInterstitial;
 import com.creativeads.AdRewardedVideo;
 import com.creativeads.AdService;
-import com.applovin.sdk.*;
+import com.applovin.sdk.AppLovinPrivacySettings;
+
 // import com.unity3d.ads.metadata.MetaData;
 import com.google.ads.mediation.adcolony.AdColonyMediationAdapter;
 
@@ -60,9 +61,12 @@ public class AdServiceAdMob implements AdService {
             AdColonyAppOptions appOptions = AdColonyMediationAdapter.getAppOptions();
             appOptions.setPrivacyFrameworkRequired(AdColonyAppOptions.GDPR, true);
             appOptions.setPrivacyConsentString(AdColonyAppOptions.GDPR, "1");
+            AppLovinPrivacySettings.setHasUserConsent(true, context);
+            AppLovinPrivacySettings.setIsAgeRestrictedUser(false, context);
+
 
             MobileAds.initialize(activity, appId);
-            AppLovinSdk.initializeSdk(activity);
+
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
             //MediationTestSuite.launch(activity);
             //AudienceNetworkInitializeHelper.initialize(activity);
