@@ -62,14 +62,6 @@ public class AdServiceAdMob implements AdService {
 
 
             MobileAds.initialize(activity, appId);
-            AdColonyAppOptions appOptions = AdColonyMediationAdapter.getAppOptions();
-            appOptions.setPrivacyFrameworkRequired(AdColonyAppOptions.GDPR, true);
-            appOptions.setPrivacyConsentString(AdColonyAppOptions.GDPR, "1");
-            
-            AppLovinPrivacySettings.setHasUserConsent(true, activity);
-            AppLovinPrivacySettings.setIsAgeRestrictedUser(false, activity);
-            
-
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
             //MediationTestSuite.launch(activity);
             //AudienceNetworkInitializeHelper.initialize(activity);
