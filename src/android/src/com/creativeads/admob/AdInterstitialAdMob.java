@@ -68,6 +68,8 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
         // .addTestDevice("A8CA27EE6F83C9D384A8523CDE61C70C")
 
         _interstitial.loadAd(adRequest);
+        //_interstitial.loadAd(new AdRequest.Builder().build());
+
     }
 
     @Override
