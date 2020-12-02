@@ -70,11 +70,11 @@ public class AdServiceAdMob implements AdService {
           //  appOptions.setGDPRRequired(true);
            // AudienceNetworkAds.initialize(activity);
             AudienceNetworkAds.initialize(activity);
-           // MobileAds.initialize(activity, appId);
-            MobileAds.initialize(activity, new OnInitializationCompleteListener() {
-                @Override
-                public void onInitializationComplete(InitializationStatus initializationStatus) {}
-            });
+            MobileAds.initialize(activity, appId);
+          //  MobileAds.initialize(activity, new OnInitializationCompleteListener() {
+          //      @Override
+          //      public void onInitializationComplete(InitializationStatus initializationStatus) {}
+           // });
 
             
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
