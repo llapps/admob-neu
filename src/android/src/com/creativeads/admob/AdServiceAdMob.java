@@ -5,6 +5,10 @@ import android.content.Context;
 import android.util.Log;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.AdapterStatus;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 //import com.google.android.ads.mediationtestsuite.MediationTestSuite;
 import com.creativeads.AdBanner;
 import com.creativeads.AdInterstitial;
@@ -63,7 +67,22 @@ public class AdServiceAdMob implements AdService {
           //  appOptions.setGDPRRequired(true);
            // AudienceNetworkAds.initialize(activity);
 
-            MobileAds.initialize(activity, appId);
+           // MobileAds.initialize(activity, appId);
+            MobileAds.initialize(activity, appId, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+                Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
+                for (String adapterClass : statusMap.keySet()) {
+                    AdapterStatus status = statusMap.get(adapterClass);
+                    Log.d("MyApp", String.format(
+                            "Adapter name: %s, Description: %s, Latency: %d",
+                            adapterClass, status.getDescription(), status.getLatency()));
+                }
+
+                // Start loading ads here...
+            }
+        });
+
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
             //MediationTestSuite.launch(activity);
             //AudienceNetworkInitializeHelper.initialize(activity);
