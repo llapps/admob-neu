@@ -2,7 +2,6 @@ package com.creativeads.admob;
 
 import android.os.Bundle;
 import android.util.Log;
-import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
