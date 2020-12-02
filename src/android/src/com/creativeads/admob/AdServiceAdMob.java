@@ -7,7 +7,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.facebook.ads.AudienceNetworkAds;
 
-import com.google.android.ads.mediationtestsuite.MediationTestSuite;
+//import com.google.android.ads.mediationtestsuite.MediationTestSuite;
 import com.creativeads.AdBanner;
 import com.creativeads.AdInterstitial;
 import com.creativeads.AdRewardedVideo;
@@ -68,8 +68,8 @@ public class AdServiceAdMob implements AdService {
             MobileAds.initialize(activity, appId);
             
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
-            MediationTestSuite.addTestDevice("2AA5D4D0965DB13F46DAD7A90206104B");
-            MediationTestSuite.launch(activity);
+            //MediationTestSuite.addTestDevice("2AA5D4D0965DB13F46DAD7A90206104B");
+            //MediationTestSuite.launch(activity);
             //AudienceNetworkInitializeHelper.initialize(activity);
             _initialized = true;
           
