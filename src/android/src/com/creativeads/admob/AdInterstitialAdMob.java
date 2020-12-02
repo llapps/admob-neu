@@ -3,6 +3,7 @@ package com.creativeads.admob;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
