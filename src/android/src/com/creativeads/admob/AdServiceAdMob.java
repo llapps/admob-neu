@@ -68,7 +68,7 @@ public class AdServiceAdMob implements AdService {
             
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
             //MediationTestSuite.launch(activity);
-            AudienceNetworkInitializeHelper.initialize(activity);
+            //AudienceNetworkInitializeHelper.initialize(activity);
             _initialized = true;
           
         }
