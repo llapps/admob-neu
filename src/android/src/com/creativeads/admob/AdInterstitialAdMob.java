@@ -3,7 +3,7 @@ package com.creativeads.admob;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.google.ads.mediation.admob.AdMobAdapter;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -64,9 +64,9 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
 
     @Override
     public void loadAd() {
-        AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
-        _interstitial.loadAd(adRequest);
-       // _interstitial.loadAd(new AdRequest.Builder().build());
+        //AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
+        //_interstitial.loadAd(adRequest);
+        _interstitial.loadAd(new AdRequest.Builder().build());
 
     }
 
