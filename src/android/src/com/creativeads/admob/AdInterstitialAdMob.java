@@ -63,12 +63,9 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
 
     @Override
     public void loadAd() {
-        AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
-        // AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId);
-        // .addTestDevice("A8CA27EE6F83C9D384A8523CDE61C70C")
-
-        _interstitial.loadAd(adRequest);
-        //_interstitial.loadAd(new AdRequest.Builder().build());
+      //  AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
+       // _interstitial.loadAd(adRequest);
+        _interstitial.loadAd(new AdRequest.Builder().build());
 
     }
 
