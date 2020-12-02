@@ -63,7 +63,7 @@ public class AdServiceAdMob implements AdService {
           //  appOptions.setGDPRConsentString("1");
           //  appOptions.setGDPRRequired(true);
            // AudienceNetworkAds.initialize(activity);
-
+            AudienceNetworkAds.initialize(activity);
             MobileAds.initialize(activity, appId);
             
             //MediationTestSuite.addTestDevice("9B45C6730D606E8951D176909258C415"); 
