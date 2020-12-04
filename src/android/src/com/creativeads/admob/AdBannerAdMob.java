@@ -3,7 +3,7 @@ package com.creativeads.admob;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import com.google.ads.mediation.admob.AdMobAdapter;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -89,7 +89,7 @@ public class AdBannerAdMob extends AbstractAdBanner {
 
     @Override
     public void loadAd() {
-        AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
+        AdRequest adRequest = new AdRequest.Builder().build();
         banner.loadAd(adRequest);
     }
 
