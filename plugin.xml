@@ -15,8 +15,8 @@
            
             
         <preference name="APPLICATION_ID" default="ca-app-pub-6681943608991578~3835909604" />
-        <preference name="PLAY_SERVICES_VERSION" default="19.5.0"/>
-        <preference name="FACEBOOK_MEDIATION_VERSION" default="6.2.0.0"/>
+        <preference name="PLAY_SERVICES_VERSION" default="20.0.0"/>
+        <preference name="FACEBOOK_MEDIATION_VERSION" default="6.3.0.1"/>
         <source-file src="src/android/src/com/creativeads/AdService.java" target-dir="src/com/creativeads"/>
         <source-file src="src/android/src/com/creativeads/AdBanner.java" target-dir="src/com/creativeads"/>
         <source-file src="src/android/src/com/creativeads/AbstractAdBanner.java" target-dir="src/com/creativeads"/>
@@ -65,11 +65,10 @@
 
         <framework src="com.google.android.gms:play-services-ads:$PLAY_SERVICES_VERSION" />       
         <framework src="com.google.ads.mediation:facebook:$FACEBOOK_MEDIATION_VERSION" />
-        <framework src="com.facebook.android:audience-network-sdk:6.2.0'" />
-        <framework src="com.google.ads.mediation:applovin:9.14.6.0" />
-        <framework src="com.google.ads.mediation:adcolony:4.3.0.0" />
-        <framework src="com.google.ads.mediation:ironsource:7.0.3.1.0" />
-            
+        <framework src="com.facebook.android:audience-network-sdk:6.3.0'" />
+        <framework src="com.google.ads.mediation:applovin:10.0.1.0" />
+        <framework src="com.google.ads.mediation:adcolony:4.4.1.0" />
+        <framework src="com.google.ads.mediation:ironsource:7.1.4.0" />    
             
         
 
