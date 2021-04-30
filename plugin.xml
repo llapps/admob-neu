@@ -69,7 +69,7 @@
         <framework src="com.google.ads.mediation:applovin:10.0.1.0" />
         <framework src="com.google.ads.mediation:adcolony:4.4.1.0" />
         <framework src="com.google.ads.mediation:ironsource:7.1.4.0" />    
-        <framework src="com.android.tools.build:gradle:4.1.3" />    
+        <framework src="com.android.tools.build:gradle:4.2.0" />    
             
         
 
