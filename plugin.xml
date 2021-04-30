@@ -63,7 +63,7 @@
 
          <framework src="android/build-extras.gradle" custom="true" type="gradleReference" />
 
-        <framework src="com.google.android.gms:play-services-ads:19.8.0" />       
+        <framework src="com.google.android.gms:play-services-ads:19.5.0" />       
         <framework src="com.google.ads.mediation:facebook:$FACEBOOK_MEDIATION_VERSION" />
         <framework src="com.facebook.android:audience-network-sdk:6.2.0'" />
         <framework src="com.google.ads.mediation:applovin:9.14.6.0" />
