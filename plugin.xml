@@ -63,8 +63,8 @@
          <framework src="android/build-extras.gradle" custom="true" type="gradleReference" />
 
         <framework src="com.google.android.gms:play-services-ads:20.5.0" />       
-        <framework src="com.google.ads.mediation:facebook:6.8.0.0" />
-        <framework src="com.google.ads.mediation:applovin:11.1.0.0" />
+        <framework src="com.google.ads.mediation:facebook:6.7.0.0" />
+        <framework src="com.google.ads.mediation:applovin:11.0.0.0" />
         <framework src="com.google.ads.mediation:adcolony:4.6.5.0" />
         <framework src="com.google.ads.mediation:ironsource:7.1.3.0" />
             
