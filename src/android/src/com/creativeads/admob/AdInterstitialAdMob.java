@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -14,7 +15,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 import com.creativeads.AbstractAdInterstitial;
 
 public class AdInterstitialAdMob extends AbstractAdInterstitial {
-    private InterstitialAd mInterstitialAd;
+    private InterstitialAd _interstitial;
     private boolean adsConsent;
     private boolean isTest;
     private String testDeviceId;
@@ -28,9 +29,9 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
         this.gender = gender;
         this.underAgeOfConsent = underAgeOfConsent;
 
-        mInterstitialAd = new InterstitialAd(ctx);
-        mInterstitialAd.setAdUnitId(adUnit);
-        mInterstitialAd.setAdListener(new AdListener() {
+        _interstitial = new InterstitialAd(ctx);
+        _interstitial.setAdUnitId(adUnit);
+        _interstitial.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 notifyOnDismissed();
@@ -66,14 +67,14 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
     public void loadAd() {
         //AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
         //_interstitial.loadAd(adRequest);
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        _interstitial.loadAd(new AdRequest.Builder().build());
 
     }
 
     @Override
     public void show() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if (_interstitial.isLoaded()) {
+            _interstitial.show();
         } else {
             loadAd();
         }
