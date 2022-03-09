@@ -6,9 +6,7 @@ import android.util.Log;
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.rewarded.RewardItem;
-import com.google.android.gms.ads.rewarded.RewardedVideoAd;
-import com.google.android.gms.ads.rewarded.RewardedVideoAdListener;
+import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.creativeads.AbstractAdRewardedVideo;
 import com.creativeads.AdRewardedVideo;
 
