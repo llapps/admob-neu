@@ -14,7 +14,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 import com.creativeads.AbstractAdInterstitial;
 
 public class AdInterstitialAdMob extends AbstractAdInterstitial {
-    private InterstitialAd _interstitial;
+    private InterstitialAd mInterstitialAd;
     private boolean adsConsent;
     private boolean isTest;
     private String testDeviceId;
@@ -28,9 +28,9 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
         this.gender = gender;
         this.underAgeOfConsent = underAgeOfConsent;
 
-        _interstitial = new InterstitialAd(ctx);
-        _interstitial.setAdUnitId(adUnit);
-        _interstitial.setAdListener(new AdListener() {
+        mInterstitialAd = new InterstitialAd(ctx);
+        mInterstitialAd.setAdUnitId(adUnit);
+        mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 notifyOnDismissed();
@@ -66,14 +66,14 @@ public class AdInterstitialAdMob extends AbstractAdInterstitial {
     public void loadAd() {
         //AdRequest adRequest = AdMobUtils.getAdRequest(adsConsent, isTest, testDeviceId, gender, underAgeOfConsent);
         //_interstitial.loadAd(adRequest);
-        _interstitial.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
     }
 
     @Override
     public void show() {
-        if (_interstitial.isLoaded()) {
-            _interstitial.show();
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
         } else {
             loadAd();
         }
