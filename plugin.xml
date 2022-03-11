@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="creativeads-admob" version="1.0.3">
+        id="admob-plus-cordova" version="1.0.3">
     <name>admob-plus-cordova</name>
     <js-module name="AdMob" src="www/admob.js">
         <clobbers target="admob" />
