@@ -1,0 +1,7 @@
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        url 'https://android-sdk.is.com/'
+    }
+}
